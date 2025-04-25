@@ -12,7 +12,7 @@ captura = pyautogui.screenshot()
 
 captura = cv2.cvtColor(np.array(captura), cv2.COLOR_RGB2BGR)
 
-zona_resultado = captura[350:850, 830:1430]  #
+zona_resultado = captura[535:580, 970:1290]  #
 
 
 cv2.imshow("zona_resultado", zona_resultado)
