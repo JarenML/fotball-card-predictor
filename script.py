@@ -58,6 +58,10 @@ while True:
 
     if mejor_match in ["EMPATE", "LOCAL", "VISITANTE"]:
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        # guardar resultados en csv, tiempo real
+        with open("resultados.csv", "a") as f:
+            f.write(f"{timestamp},{mejor_match}\n")
+        
         nombre_archivo = f"capturas/{mejor_match}_{timestamp}.png"
         cv2.imwrite(nombre_archivo, zona_resultado)
 
